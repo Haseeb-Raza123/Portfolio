@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile with Progress Bars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f9;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: rgb(9, 26, 42);
+            padding: 10px 20px;
+        }
+
+        .nav__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav__content .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav__content ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__content ul li {
+            margin-left: 20px;
+        }
+
+        .nav__content ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .checkbox {
+            display: none;
+        }
+
+        .ri-menu-line {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .info {
+            width: 45%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info div {
+            margin-bottom: 10px;
+        }
+
+        .info div span {
+            font-weight: bold;
+        }
+
+        .progress-container {
+            width: 45%;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            margin: 15px 0;
+            padding: 3px;
+        }
+
+        .progress-bar-fill {
+            display: block;
+            height: 20px;
+            border-radius: 25px;
+            background-color: #ff2e2e;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .progress-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .ri-menu-line {
+                display: block;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .nav__content ul {
+                display: none;
+                flex-direction: column;
+                background-color: rgb(9, 26, 42);
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav__content ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .nav__content ul li a {
+                font-size: 18px;
+            }
+
+            #check:checked+ul {
+                display: flex;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info,
+            .progress-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Haseeb</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">About</a></li>
+                <li><a href="index3.html">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="info">
+            <div><span>Birthday:</span> 09 October 2004</div>
+            <div><span>Degree:</span> Software Engineer</div>
+            <div><span>City:</span> Kotla Arab Ali Khan</div>
+            <div><span>Age:</span> 19</div>
+            <div><span>Email:</span> hr547821@gmail.com</div>
+            <div><span>Phone:</span> +92-3086187560</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">CSS</div>
+            <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 76%;">76%</span>
+            </div>
+
+            <div class="progress-label">JS</div>
+            <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 86%;">86%</span>
+            </div>
+
+            <div class="progress-label">HTML</div>
+            <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 90%;">90%</span>
+            </div>
+
+            <div class="progress-label">Bootstrap</div>
+            <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 56%;">56%</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
